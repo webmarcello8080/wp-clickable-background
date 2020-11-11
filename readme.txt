@@ -51,6 +51,4 @@ e.g.
 == Screenshots ==
 
 1. WP Clickable Background settings
-2. WP Clickable Background form
-3. WP Clickable Background example
-
+2. WP Clickable Background example

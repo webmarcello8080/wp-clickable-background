@@ -10,9 +10,6 @@
  * Author URI:        http://webmarcello.co.uk
  */
 /*
-- readme for github
-- readme for wordpress
-- take picture
 - article on website
 */
  define('PLUGIN_WCB_BASENAME', plugin_basename(__FILE__) );
