@@ -27,12 +27,14 @@ if ( !class_exists( 'WpClickableBackgroundFrontend' ) ) {
         }
 
         public function addLink(){
-            ?>
+            ?> 
+                <input type="hidden" name="hidden-link" id="wp-clickable-background-link" value="<?= esc_url(get_option('wp-clickable-background-link')); ?>" />
             <?php
         }
 
         public function addMode(){
             ?>
+                <input type="hidden" name="hidden-mode" id="wp-clickable-background-mode" value="<?= esc_attr(get_option('wp-clickable-background-new')); ?>" />
             <?php
         }
     }
