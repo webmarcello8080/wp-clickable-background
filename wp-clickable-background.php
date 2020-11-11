@@ -11,7 +11,6 @@
  */
 /*
 - create Javascript
-- add external JS
 - readme for github
 - readme for wordpress
 - take picture

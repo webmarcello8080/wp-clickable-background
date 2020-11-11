@@ -10,7 +10,8 @@
       <form method="post" action="<?= esc_html( admin_url( 'admin-post.php' ) ); ?>">
 
             <div class="form-description">
-                  Plugin description in here
+                  This plugin works only when the click is direct on the body without any other target in between,<br/>
+                  please be sure that your website si boxed and the body is directly clickable.
             </div>
 
             <table class="form-table">
@@ -102,7 +103,7 @@
                                           class="regular-text" />
                                     <label for="wp-clickable-background-new-window">New Window</label><br/>
                                     <p class="description" id="wp-clickable-background-new-description">
-                                          Target of the click, the link can be open in the same tab, in a new tab or in a new window.
+                                          Target of the click, the link can be opened in the same tab, in a new tab or in a new window.
                                     </p>
                               </td>
                         </tr>
@@ -119,7 +120,7 @@
                                           class="large-text code"
                                           rows="10"><?= stripslashes(get_option('wp-clickable-background-javascript')) ?></textarea>
                                     <p class="description" id="wp-clickable-background-javascript-description">
-                                          Add a custom Javascript to your link, this Javascript will be added on the footer.
+                                          Add a custom Javascript to your page, this Javascript code will be added on the footer.
                                     </p>
                               </td>
                         </tr>
