@@ -10,7 +10,6 @@
  * Author URI:        http://webmarcello.co.uk
  */
 /*
-- form
 - create Javascript
 - add external JS
 - readme for github
@@ -29,6 +28,7 @@ if ( !function_exists( 'wp_clickable_background_loader' ) ) {
         if( is_admin() ){
             $WpClickableBackgroundAdmin = new WpClickableBackgroundAdmin;
         }
+        $WpClickableBackgroundFrontend = new WpClickableBackgroundFrontend;
     }
     add_action('plugins_loaded', 'wp_clickable_background_loader');
 }

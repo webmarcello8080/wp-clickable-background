@@ -119,7 +119,7 @@
                                           class="large-text code"
                                           rows="10"><?= stripslashes(get_option('wp-clickable-background-javascript')) ?></textarea>
                                     <p class="description" id="wp-clickable-background-javascript-description">
-                                          Add a custom javascript to your link.
+                                          Add a custom Javascript to your link, this Javascript will be added on the footer.
                                     </p>
                               </td>
                         </tr>

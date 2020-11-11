@@ -8,7 +8,7 @@ if ( !class_exists( 'WpClickableBackgroundAdmin' ) ) {
         public function __construct(){
             add_action( 'admin_menu', array( $this, 'adminMenu' ) );
             add_action( 'admin_post', array( $this, 'adminSave' ) );
-            //add_action( 'admin_enqueue_scripts', array( $this, 'adminStyle' ) );
+
             $this->model = new WpClickableBackgroundModel;
         }
 
@@ -51,13 +51,5 @@ if ( !class_exists( 'WpClickableBackgroundAdmin' ) ) {
                 exit;
             }
         }
-
-        // public function adminStyle() {
-        //     wp_enqueue_style('wp-phone-message-intel-tel', PLUGIN_WPM_URL . 'js/intl-tel-input/build/css/intlTelInput.css', array(), null, 'all' );
-        //     wp_enqueue_script('wp-phone-message-intel-tel', PLUGIN_WPM_URL . 'js/intl-tel-input/build/js/intlTelInput.js' );
-        //     wp_enqueue_style('wp-phone-message-admin', PLUGIN_WPM_URL . 'css/admin.min.css', array(), null, 'all' );
-        //     wp_enqueue_script('wp-phone-message-admin', PLUGIN_WPM_URL . 'js/admin.min.js', array( 'jquery' ), '1.0.0', true );
-        // }
-
     }
 }
