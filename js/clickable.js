@@ -1,12 +1,13 @@
 (function(){
-    document.querySelector(".custom-background").onclick = function (event) {
-        console.log(event.target);
+    const elemntClass = document.getElementById('wp-clickable-background-class').value;
+
+    document.querySelector('.' + elemntClass).onclick = function (event) {
         if (event.target !== this)
             return;
-        const link =  document.getElementById('wp-clickable-background-link').value;
-        const mode =  document.getElementById('wp-clickable-background-mode').value;
-        console.log(link);console.log(mode);
-        /*
+        
+        const link = document.getElementById('wp-clickable-background-link').value;
+        const mode = document.getElementById('wp-clickable-background-mode').value;
+        
         switch(mode) {
             case 'same':
                 var win = window.open(link, '_self');
@@ -26,7 +27,9 @@
                 var popup = window.open(link, 'popup_window', params); 
                 popup.moveTo(0,0);
                 break;
+            default:
+                var win = window.open(link, '_self');
+                win.focus();
         }
-*/
     };
 }());

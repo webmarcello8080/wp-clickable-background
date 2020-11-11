@@ -7,6 +7,7 @@ if ( !class_exists( 'WpClickableBackgroundFrontend' ) ) {
             if( get_option('wp-clickable-background-active') ){
                 add_action( 'wp_enqueue_scripts', array( $this, 'includeJs' ) );
                 add_action('wp_footer', array( $this, 'addLink' ));
+                add_action('wp_footer', array( $this, 'addClass' ));
                 add_action('wp_footer', array( $this, 'addMode' ));
             }
             if(get_option('wp-clickable-background-javascript')){
@@ -35,6 +36,12 @@ if ( !class_exists( 'WpClickableBackgroundFrontend' ) ) {
         public function addMode(){
             ?>
                 <input type="hidden" name="hidden-mode" id="wp-clickable-background-mode" value="<?= esc_attr(get_option('wp-clickable-background-new')); ?>" />
+            <?php
+        }
+
+        public function addClass(){
+            ?>
+                <input type="hidden" name="hidden-class" id="wp-clickable-background-class" value="<?= esc_attr(get_option('wp-clickable-background-class')); ?>" />
             <?php
         }
     }

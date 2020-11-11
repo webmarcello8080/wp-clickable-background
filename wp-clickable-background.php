@@ -10,7 +10,6 @@
  * Author URI:        http://webmarcello.co.uk
  */
 /*
-- create Javascript
 - readme for github
 - readme for wordpress
 - take picture

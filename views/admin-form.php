@@ -10,8 +10,8 @@
       <form method="post" action="<?= esc_html( admin_url( 'admin-post.php' ) ); ?>">
 
             <div class="form-description">
-                  This plugin works only when the click is direct on the body without any other target in between,<br/>
-                  please be sure that your website si boxed and the body is directly clickable.
+                  This plugin works only when the event click is direct on the element with class specified on field <i>"Element Class"</i> without any other HTML element on top of it,<br/>
+                  <b>Please be sure that choosen elemenet is directly clickable.</b>
             </div>
 
             <table class="form-table">
@@ -52,6 +52,26 @@
                                     </a>
                                     <p class="description" id="wp-clickable-background-bglink-description">
                                           Click the button above to manage your background image.
+                                    </p>
+                              </td>
+                        </tr>
+
+                        <tr>
+                              <th scope="row">
+                                    <label for="wp-clickable-background-class">
+                                          Element Class :
+                                    </label>
+                              </th>
+                              <td>
+                                    <input name="wp-clickable-background-class" 
+                                          type="text"
+                                          id="wp-clickable-background-class"
+                                          value="<?= get_option('wp-clickable-background-class') ? esc_attr( get_option('wp-clickable-background-class') )  : 'custom-background' ?>"
+                                          class="regular-text" />
+                                    <p class="description" id="wp-clickable-background-class-description">
+                                          The class of the element that will trigger the click,<br/>
+                                          as default this is 'custom-background', but your website could use differnt element class,<br/>
+                                          please inspect your code to find out what class you want to trigger.
                                     </p>
                               </td>
                         </tr>
