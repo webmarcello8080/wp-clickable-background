@@ -21,3 +21,7 @@ On your wordpress dashboard, go to Plugins => Installed Plugins, search for WP C
 
 The WP Clickable Background setting are on the wordpress dashboard on Settings => WP Clickable Background, please read the note on the top of the page.
 This plugin works only when the event click is direct on the element with class specified on field "Element Class" without any other HTML element on top of it, Please be sure that choosen elemenet is directly clickable.
+
+![WP Clickable Background settings](https://webmarcello.co.uk/wp-content/uploads/2020/11/WP-Clickable-Background-settings.jpg)
+
+![WP Clickable Background example](https://webmarcello.co.uk/wp-content/uploads/2016/08/clickable_area.jpg)
