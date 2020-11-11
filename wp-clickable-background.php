@@ -9,7 +9,15 @@
  * Author:            Marcello Perri
  * Author URI:        http://webmarcello.co.uk
  */
-
+/*
+- form
+- create Javascript
+- add external JS
+- readme for github
+- readme for wordpress
+- take picture
+- article on website
+*/
  define('PLUGIN_WCB_BASENAME', plugin_basename(__FILE__) );
 
 foreach ( glob( plugin_dir_path( __FILE__ ) .'includes/*.php') as $filename){

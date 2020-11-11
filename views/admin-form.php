@@ -18,7 +18,7 @@
                         <tr>
                               <th scope="row">
                                     <label for="wp-clickable-background-active">
-                                          Active :
+                                          Active/Deactive Click :
                                     </label>
                               </th>
                               <td>
@@ -29,7 +29,7 @@
                                           value="1"
                                           class="regular-text" />
                                     <p class="description" id="wp-clickable-background-active-description">
-                                          Descrition.
+                                          If this is checked the event Click will be active for the background.
                                     </p>
                               </td>
                         </tr>
@@ -58,7 +58,7 @@
                         <tr>
                               <th scope="row">
                                     <label for="wp-clickable-background-link">
-                                          Label Link :
+                                          Page Link/URL :
                                     </label>
                               </th>
                               <td>
@@ -68,7 +68,7 @@
                                           value="<?= esc_url(get_option('wp-clickable-background-link')) ?>"
                                           class="regular-text" />
                                     <p class="description" id="wp-clickable-background-link-description">
-                                          Descrition.
+                                          The page where you will be redirect.
                                     </p>
                               </td>
                         </tr>
@@ -76,7 +76,7 @@
                         <tr>
                               <th scope="row">
                                     <label for="wp-clickable-background-new">
-                                          New Tab :
+                                          Where to open the Link :
                                     </label>
                               </th>
                               <td>
@@ -102,7 +102,7 @@
                                           class="regular-text" />
                                     <label for="wp-clickable-background-new-window">New Window</label><br/>
                                     <p class="description" id="wp-clickable-background-new-description">
-                                          Descrition.
+                                          Target of the click, the link can be open in the same tab, in a new tab or in a new window.
                                     </p>
                               </td>
                         </tr>
@@ -119,7 +119,7 @@
                                           class="large-text code"
                                           rows="10"><?= stripslashes(get_option('wp-clickable-background-javascript')) ?></textarea>
                                     <p class="description" id="wp-clickable-background-javascript-description">
-                                          Descrition.
+                                          Add a custom javascript to your link.
                                     </p>
                               </td>
                         </tr>
