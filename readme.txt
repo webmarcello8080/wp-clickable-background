@@ -1,4 +1,4 @@
-=== WP Phone Message ===
+=== WP Clickable Background ===
 Contributors: webmarcello
 Tags: click, background, clickable, javascript
 Requires at least: 4.5.13
