@@ -1,12 +1,13 @@
 (function(){
-    const elemntClass = document.getElementById('wp-clickable-background-class').value;
 
-    document.querySelector('.' + elemntClass).onclick = function (event) {
+    const elementClass = wp_clickable_bg_data.elementClass;
+
+    document.querySelector('.' + elementClass).onclick = function (event) {
         if (event.target !== this)
             return;
         
-        const link = document.getElementById('wp-clickable-background-link').value;
-        const mode = document.getElementById('wp-clickable-background-mode').value;
+        const link = wp_clickable_bg_data.link;
+        const mode = wp_clickable_bg_data.mode;
         
         switch(mode) {
             case 'same':

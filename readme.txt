@@ -2,7 +2,7 @@
 Contributors: webmarcello
 Tags: click, background, clickable, javascript
 Requires at least: 4.5.13
-Tested up to: 5.5.3
+Tested up to: 5.6
 Stable tag: trunk
 Requires PHP: 5.6
 License: GPLv2 or later
@@ -39,6 +39,11 @@ e.g.
 
 
 == Changelog ==
+
+= 1.0.1 =
+* Cleaning code
+* Minify JS
+* Sending data to JS through WP_LOCALIZE
 
 = 1.0.0 =
 * Creating settings from

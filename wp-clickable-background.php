@@ -3,7 +3,7 @@
  * Plugin Name:       WP Clickable Background
  * Plugin URI:        https://github.com/webmarcello8080/wp-clickable-background
  * Description:       Wordpress Plugin in order to make the background of your website clickable.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires at least: 4.5.13
  * Requires PHP:      5.6
  * Author:            Marcello Perri
@@ -21,9 +21,9 @@ foreach ( glob( plugin_dir_path( __FILE__ ) .'includes/*.php') as $filename){
 if ( !function_exists( 'wp_clickable_background_loader' ) ) {
     function wp_clickable_background_loader(){
         if( is_admin() ){
-            $WpClickableBackgroundAdmin = new WpClickableBackgroundAdmin;
+            new WpClickableBackgroundAdmin;
         }
-        $WpClickableBackgroundFrontend = new WpClickableBackgroundFrontend;
+        new WpClickableBackgroundFrontend;
     }
     add_action('plugins_loaded', 'wp_clickable_background_loader');
 }
