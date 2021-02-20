@@ -6,9 +6,6 @@ if ( !class_exists( 'WpClickableBackgroundFrontend' ) ) {
         public function __construct(){
             if( get_option('wp-clickable-background-active') ){
                 add_action( 'wp_enqueue_scripts', array( $this, 'includeJs' ) );
-                add_action('wp_footer', array( $this, 'addLink' ));
-                add_action('wp_footer', array( $this, 'addClass' ));
-                add_action('wp_footer', array( $this, 'addMode' ));
             }
             if(get_option('wp-clickable-background-javascript')){
                 add_action('wp_footer', array( $this, 'addStaticJs' ));
@@ -16,7 +13,13 @@ if ( !class_exists( 'WpClickableBackgroundFrontend' ) ) {
         }
 
         public function includeJs(){
-            wp_enqueue_script('wp-clickable-background-js', PLUGIN_WCB_URL . 'js/clickable.js', array(), false, true );
+            wp_enqueue_script('wp-clickable-background-js', PLUGIN_WCB_URL . 'js/clickable.min.js', array(), false, true );
+            wp_localize_script('wp-clickable-background-js', 'wp_clickable_bg_data',
+            array( 
+                'elementClass' => esc_attr(get_option('wp-clickable-background-class')),
+                'link' => esc_url(get_option('wp-clickable-background-link')),
+                'mode' => esc_attr(get_option('wp-clickable-background-new')),
+            ));
         }
 
         public function addStaticJs(){
@@ -24,24 +27,6 @@ if ( !class_exists( 'WpClickableBackgroundFrontend' ) ) {
                 <script>
                     <?= stripslashes(get_option('wp-clickable-background-javascript')); ?>
                 </script>
-            <?php
-        }
-
-        public function addLink(){
-            ?> 
-                <input type="hidden" name="hidden-link" id="wp-clickable-background-link" value="<?= esc_url(get_option('wp-clickable-background-link')); ?>" />
-            <?php
-        }
-
-        public function addMode(){
-            ?>
-                <input type="hidden" name="hidden-mode" id="wp-clickable-background-mode" value="<?= esc_attr(get_option('wp-clickable-background-new')); ?>" />
-            <?php
-        }
-
-        public function addClass(){
-            ?>
-                <input type="hidden" name="hidden-class" id="wp-clickable-background-class" value="<?= esc_attr(get_option('wp-clickable-background-class')); ?>" />
             <?php
         }
     }

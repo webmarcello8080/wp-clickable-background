@@ -18,9 +18,9 @@ foreach ( glob( plugin_dir_path( __FILE__ ) .'includes/*.php') as $filename){
 if ( !function_exists( 'wp_clickable_background_loader' ) ) {
     function wp_clickable_background_loader(){
         if( is_admin() ){
-            $WpClickableBackgroundAdmin = new WpClickableBackgroundAdmin;
+            new WpClickableBackgroundAdmin;
         }
-        $WpClickableBackgroundFrontend = new WpClickableBackgroundFrontend;
+        new WpClickableBackgroundFrontend;
     }
     add_action('plugins_loaded', 'wp_clickable_background_loader');
 }
